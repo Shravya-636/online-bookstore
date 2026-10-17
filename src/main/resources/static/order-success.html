@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed - BookStore</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        📚 BookStore
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/orders.html">My Orders</a>
+    </nav>
+
+</header>
+
+
+<main class="success-page">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>
+            Order Placed Successfully!
+        </h1>
+
+        <p>
+            Thank you for your purchase.
+        </p>
+
+        <p>
+            Order ID:
+            <strong id="orderId"></strong>
+        </p>
+
+        <p>
+            Total:
+            ₹<strong id="orderTotal"></strong>
+        </p>
+
+        <div class="success-actions">
+
+            <a href="/orders.html">
+                View My Orders
+            </a>
+
+            <a href="/">
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+<script>
+
+    const orderData =
+        localStorage.getItem("lastOrder");
+
+    if (orderData) {
+
+        const order =
+            JSON.parse(orderData);
+
+        document.getElementById(
+            "orderId"
+        ).textContent = order.id;
+
+        document.getElementById(
+            "orderTotal"
+        ).textContent = order.totalAmount;
+
+        localStorage.removeItem(
+            "lastOrder"
+        );
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BookStore</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+
+        <a href="/cart.html">
+            Cart <span id="cartCount">0</span>
+        </a>
+        <a href="/orders.html">
+            My Orders
+        </a>
+
+        <span id="authSection"></span>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Discover Your Next Great Read</h1>
+        <p>Explore books across technology, fiction, self-help and more.</p>
+        <a href="#books" class="hero-button">Browse Books</a>
+    </div>
+</section>
+
+<section id="books" class="books-section">
+
+    <div class="section-header">
+        <h2>Available Books</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search books..."
+        >
+    </div>
+
+    <div id="bookContainer" class="book-container">
+        <p>Loading books...</p>
+    </div>
+
+</section>
+
+<section id="about" class="about">
+    <h2>About BookStore</h2>
+    <p>
+        BookStore is an online platform for discovering and purchasing
+        books across different categories.
+    </p>
+</section>
+
+<footer>
+    <p>© BookStore. All rights reserved.</p>
+</footer>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

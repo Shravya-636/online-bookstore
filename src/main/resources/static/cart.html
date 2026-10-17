@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - BookStore</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="logo">
+        📚 BookStore
+    </div>
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/#books">
+            Books
+        </a>
+
+        <a href="/#about">
+            About
+        </a>
+
+        <a href="/cart.html">
+            Cart
+        </a>
+
+        <span id="authSection"></span>
+
+    </nav>
+
+</header>
+
+
+<main class="cart-page">
+
+    <h1>
+        Your Shopping Cart
+    </h1>
+
+
+    <div id="cartContainer">
+
+        <p>
+            Loading cart...
+        </p>
+
+    </div>
+
+
+    <div
+        id="cartSummary"
+        class="cart-summary"
+        style="display: none;">
+
+        <h2>
+            Total:
+            ₹<span id="cartTotal">0</span>
+        </h2>
+
+
+        <button
+            class="checkout-button"
+            onclick="checkout()">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="/js/cart.js"></script>
+
+</body>
+
+</html>
